@@ -37,6 +37,12 @@ static void lv_nuttx_uv_loop(uv_loop_t *loop, lv_nuttx_result_t *result)
 }
 #endif
 
+static void on_benchmark_end(const lv_demo_benchmark_summary_t *summary)
+{
+	lv_demo_benchmark_summary_display(summary);
+    LV_LOG_USER("Benchmark Over");
+}
+
 int my_lvgl_app_main(int argc, FAR char *argv[])
 {
   lv_nuttx_dsc_t info;
@@ -73,7 +79,8 @@ int my_lvgl_app_main(int argc, FAR char *argv[])
 
   /* you can begin your UI code here or try other demos/examples */
 
-  lv_demo_widgets();
+	lv_demo_benchmark_set_end_cb(on_benchmark_end);
+  lv_demo_benchmark();
 
 
 #ifdef CONFIG_LV_USE_NUTTX_LIBUV

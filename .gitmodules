@@ -1,6 +1,12 @@
 [submodule "nuttx"]
 	path = nuttx
-	url = https://github.com/apache/nuttx.git
+	url = https://github.com/liamHowatt/nuttx.git
 [submodule "apps"]
 	path = apps
-	url = https://github.com/apache/nuttx-apps.git
+	url = https://github.com/liamHowatt/nuttx-apps.git
+[submodule "espressif/esp-hal-3rdparty.git"]
+	path = espressif/esp-hal-3rdparty.git
+	url = https://github.com/espressif/esp-hal-3rdparty.git
+[submodule "espressif/mbedtls.git"]
+	path = espressif/mbedtls.git
+	url = https://github.com/espressif/mbedtls.git
